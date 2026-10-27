@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <script>
+      (function() {
+        try {
+          var _orig = window.fetch ? window.fetch.bind(window) : null;
+          var _current = _orig;
+          var propDesc = {
+            get: function() {
+              return _current;
+            },
+            set: function(val) {
+              _current = val;
+            },
+            configurable: true,
+            enumerable: true,
+          };
+          try {
+            Object.defineProperty(window, 'fetch', propDesc);
+          } catch (e1) {}
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', propDesc);
+            } catch (e2) {}
+          }
+          try {
+            localStorage.removeItem('social_check_ai_student_info_v1');
+          } catch (e3) {}
+        } catch (err) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Check AI - Trợ Lý Kiểm Tra Bài Đăng Mạng Xã Hội</title>
+    <meta name="description" content="Ứng dụng AI phân tích rủi ro ngôn ngữ, bảo vệ quyền riêng tư, kiểm chứng thông tin và đề xuất tối ưu bài đăng trước khi chia sẻ lên mạng xã hội." />
+    <meta property="og:title" content="Social Check AI - Trợ Lý Kiểm Tra Bài Đăng Mạng Xã Hội" />
+    <meta property="og:description" content="Ứng dụng AI phân tích rủi ro ngôn ngữ, bảo vệ quyền riêng tư, kiểm chứng thông tin và đề xuất tối ưu bài đăng trước khi chia sẻ lên mạng xã hội." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

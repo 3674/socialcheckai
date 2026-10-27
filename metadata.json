@@ -1,0 +1,8 @@
+{
+  "name": "Social Check AI - Trợ Lý Kiểm Tra Bài Đăng Mạng Xã Hội",
+  "description": "Ứng dụng AI phân tích rủi ro ngôn ngữ, bảo vệ quyền riêng tư, kiểm chứng thông tin và đề xuất tối ưu bài đăng trước khi chia sẻ lên mạng xã hội.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
